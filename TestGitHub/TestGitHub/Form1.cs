@@ -28,7 +28,7 @@ namespace TestGitHub
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            string clock = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+            string clock = DateTime.Now.ToShortTimeString();
             this.label.Text = clock;
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace TestGitHub
 {
@@ -31,13 +32,14 @@ namespace TestGitHub
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            
+
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.FormBorderStyle = FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -45,17 +47,32 @@ namespace TestGitHub
 
 
 
+            ///                 label
             this.label = new Label();
-            this.label.Size = new System.Drawing.Size(200, 100);
+            this.label.BackColor = Color.White;
+            this.label.Size = new System.Drawing.Size(75, 35);
             this.label.Location = new System.Drawing.Point(this.Width / 2 - (this.label.Width / 2), this.Height / 2 - (this.label.Height / 2));
             this.label.Font = new System.Drawing.Font("Times New Roman", 20);
+            ///                 label               END
+
+
+
+            ///                 panel
+            this.panel = new Panel();
+            this.panel.BorderStyle = BorderStyle.FixedSingle;
+            this.panel.BackColor = Color.White;
+            this.panel.Size = new System.Drawing.Size(400, 200);
+            this.panel.Location = new System.Drawing.Point(this.Width / 2 - (this.panel.Width / 2), this.Height / 2 - (this.panel.Height / 2));
+            ///                 panel               END
 
 
             this.Controls.Add(label);
+            this.Controls.Add(panel);
         }
 
         #endregion
         private Label label;
+        private Panel panel;
     }
 }
 
